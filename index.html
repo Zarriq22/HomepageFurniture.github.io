@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.jpeg">
+    <title>UTS - Pemrograman Web</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Navigation Start  -->
+    <div class="sticky top-0 z-20 bg-white shadow-lg">
+        <nav class="container flex justify-between items-center mx-auto py-5">
+            <div class="nav-left flex items-center gap-10">
+                <div class="flex items-center">
+                    <img src="Logo.png" alt="" class="w-10 mx-2"><span class="font-semibold hover:text-slate-400 pr-10">mangcoding Store</span>
+                </div>
+                <div class="sm:hidden md:hidden lg:flex">
+                    <ul class="flex gap-12">
+                        <li class="font-bold hover:text-slate-400"><a href="#">Home</a></li>
+                        <li class="text-slate-400 hover:text-slate-900"><a href="#">About Us</a></li>
+                        <li class="text-slate-400 hover:text-slate-900"><a href="#">Shop</a></li>
+                        <li class="text-slate-400 hover:text-slate-900"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="nav-right flex items-center gap-10 sm:hidden md:flex">
+                <img src="notif.png" alt="">
+                <img src="search.png" alt="" >
+                <button class="regis bg-black text-white py-2 px-8 hover:bg-cyan-500">Registration</button>
+            </div>
+        </nav>
+        <div class="container mx-auto z-40">
+            <div class="">
+                <div class="humburger absolute top-[10px] right-5 sm:w-11 sm:h-8 sm:px-2 sm:py-2 sm:space-y-1 m-2 md:hidden sm:block">
+                    <div class="bg-black sm:w-6 sm:h-1"></div>
+                    <div class="bg-black sm:w-6 sm:h-1"></div>
+                    <div class="bg-black sm:w-6 sm:h-1"></div>
+                </div>
+                <div class="silang absolute top-[18px] right-5 hidden md:hidden">
+                    <h1 class="text-black text-right mr-3 font-bold text-3xl px-2.5">X</h1>
+                </div>
+            </div>
+            <div class="menu flex justify-between bg-gradient-to-r from-cyan-500 to-blue-500 sm:h-[95%] sm:w-full sm:pt-3 rounded-lg px-20 hidden md:hidden">
+                <ul class="flex flex-col px-5 text-white">
+                    <li class="py-5 text-lg hover:text-slate-900 w-24"><a href="#">Home</a></li>
+                    <li class="py-5 text-lg hover:text-slate-900 w-24"><a href="#">About Us</a></li>
+                    <li class="py-5 text-lg hover:text-slate-900 w-24"><a href="#">Shop</a></li>
+                    <li class="py-5 text-lg hover:text-slate-900 w-24"><a href="#">Contact</a></li>
+                </ul>
+                <div class="flex flex-col items-center gap-10 px-5 py-[45px]">
+                    <img src="notif.png" alt="">
+                    <img src="search.png" alt="" >
+                    <button class="regis bg-black text-white py-2 px-8 hover:bg-cyan-500">Registration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Registrasi -->
+    <form class="popup h-screen w-full fixed left-100% top-100% flex justify-center items-center bg-cyan-900 bg-opacity-[80%] hidden z-30 font-serif">
+        <div class="absolute bottom-[110px] bg-white rounded shadow-lg w-[50%] h-[85%] sm:w-[75%] ">
+            <h1 class="font-bold flex justify-center border-b-4 shadow-xl py-5 text-5xl bg-gradient-to-b from-blue-500 bg-cyan-400">Order <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-zinc-500">Here</span></h1>
+            <div class="border-b shadow-lg px-10 py-2 flex justify-center items-center bg-gradient-to-r from-cyan-500 to-blue-500 sm:py-10 sm:px-0">
+                <table class="">
+                    <tr class="sm:text-xl sm:py-10 sm:px-2">
+                        <td class="font-semibold sm:py-5">Name</td>
+                        <td class="sm:py-5 sm:px-3">:</td>
+                        <td class="sm:py-5"><input type="text"  class="italic sm:px-3"></td>
+                    </tr>
+                    <tr class="sm:text-xl sm:py-10 sm:px-2">
+                        <td class="font-semibold sm:py-5">Address</td>
+                        <td class="sm:py-5 sm:px-3">:</td>
+                        <td class="sm:py-5"><input type="text" class="italic sm:px-3"></td>
+                    </tr>
+                    <tr class="text-xl">
+                        <td class="font-semibold sm:py-5">City</td>
+                        <td class="sm:py-5 sm:px-3">:</td>
+                        <td class="sm:py5"><input type="text" class="italic sm:px-3"></td>
+                    </tr>
+                    <tr class="text-xl">
+                        <td class="font-semibold sm:py-5">Email</td>
+                        <td class="sm:py-5 sm:px-3">:</td>
+                        <td class="sm:py5"><input type="text" class="italic sm:px-3"></td>
+                    </tr>
+                    <tr class="text-xl">
+                        <td class="font-semibold sm:py-5">Retype Email</td>
+                        <td class="sm:py-5 sm:px-3">:</td>
+                        <td class="sm:py5"><input type="text" class="italic sm:px-3"></td>
+                    </tr>
+                    <tr class="text-xl">
+                        <td class="font-semibold sm:py-5">Contact</td>
+                        <td class="sm:py-5 sm:px-3">:</td>
+                        <td class="sm:py5"><input type="number" class="italic sm:px-3"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="flex justify-center items-center w-full border-t-4 bg-gradient-to-t from-blue-500 bg-cyan-400 gap-10 py-[50px]">
+                <button class="close bg-slate-500 hover:bg-slate-900 px-3 py-1 rounded text-white mr-1 sm:py-2 sm:px-5">Back</button>
+                <button class="order bg-slate-500 hover:bg-slate-900 px-3 py-1 rounded text-white sm:py-2 sm:px-5">Order</button>
+            </div>
+        </div>
+    </form>
+    <!-- Order Berhasil -->
+    <div class="subPopup h-screen w-full fixed left-100% top-100% flex justify-center items-center bg-cyan-900 bg-opacity-[80%] hidden z-40 font-serif">
+        <div class="subPopup absolute top-[37%] bg-black">
+            <div class="relative"> 
+                <button class="btn text-white absolute right-4 top-3 text-xl ">
+                    X
+                </button>
+            </div>
+            <div class="text-white font-bold font-serif bg-gradient-to-r from-cyan-500 to-blue-500 sm:py-10 sm:px-14">
+                <h1 class="text-[18px]"><i>Pesanan Anda Akan Segera Kami Proses!</i></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation End-->
+
+    <!-- Header Start -->
+    <header class="bg-gray-50">
+        <div class="container relative flex mx-auto bg-gray-50 pt-36 pb-20 sm:pt-20 sm:pb-10 sm:pt-24 md:pb-14 lg:pt-[120px] lg:pb-20 xl:pb-28 xl:pt-40">
+            <div class="w-[50%] z-10 md:w-[45%] xl:w-[40%] 2xl:w-[50%]">
+                <button class="bg-black text-white font-md rounded-full px-7 py-2 mb-5 hover:bg-cyan-500 sm:text-sm md:text-md lg:text-lg xl:text-xl">Mangcoding Store</button>
+                <h1 class="font-bold text-7xl py-3 sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl sm:py-1 md:py-2 xl:py-3">Get the right
+                <h1 class="font-bold text-7xl py-3 sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl sm:py-1 md:py-2 xl:py-3">Furniture</h1>
+                <h1 class="font-bold text-7xl py-3 sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl sm:py-1 md:py-2 xl:py-3">For Your Home</h1>
+                <p class="text-justify lg:py-12 lg:text-lg sm:py-6 sm:text-sm md:py-8 md:text-md lg:text-lg xl:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. voluptate ducimus laudantium minus expedita praesentium unde?</p>
+                <button class="regis bg-black text-white px-9 py-3 hover:bg-cyan-500 sm:text-sm md:text-md lg:text-lg">Shop Now</button>
+                <img src="bawahHome.png" alt="" class="absolute lg:bottom-[273px] lg:left-72 lg:w-[230px] sm:w-[125px] sm:bottom-[195px] sm:left-[110px] md:w-[150px] md:bottom-[228px] md:left-[130px] lg:left-[220px] lg:bottom-[311px] xl:w-auto xl:bottom-[346px] xl:left-[270px] 2xl:bottom-[318px]">
+            </div>
+            <div class="w-[45%] z-10">
+                <img src="header1.png" alt="" class="absolute bottom-36 left-[52%] w-[23%] h-[70%] sm:h-[60%] sm:bottom-24 md:w-[25%] md:h-[65%] md:bottom-28 md:left-[370px] lg:h-[70%] lg:bottom-[150px] lg:left-[495px] xl:bottom-[155px] xl:left-[610px] 2xl:w-[23%] 2xl:h-[70%] 2xl:bottom-36 2xl:left-[53%]">
+                <img src="header2.png" alt="" class="absolute right-0 bottom-20 w-[23%] h-[70%] sm:h-[60%] sm:bottom-10 md:w-[25%] md:h-[65%] lg:h-[70%] xl:bottom-14 2xl:w-[23%]">
+            </div>
+        </div>
+        <div>
+            <img src="garisKeAtas.png" alt="" class="absolute w-full h-[70%] bottom-3 z-0 sm:h-[40%] sm:w-full sm:bottom-[325px] md:h-[50%] md:bottom-[248px] lg:h-[60%] lg:bottom-[105px] xl:bottom-[8px] 2xl:h-[70%] 2xl:bottom-0">
+            <img src="garisKeBawah.png" alt="" class="absolute w-full h-[70%] bottom-24 z-0 sm:h-[40%] sm:w-full sm:bottom-[365px] md:h-[50%] md:bottom-[300px] lg:h-[60%] lg:bottom-[170px] xl:bottom-[70px] 2xl:h-[70%] 2xl:bottom-[75px]">
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Sub Nav Start -->
+    <div class="bg-[#212121;]">
+        <div class="container flex justify-between items-center gap-10 bg-[#212121;] mx-auto py-10 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-10">
+            <div class="w-1/4 border-solid border-2 border-white px-6 py-2 sm:w-[150px] md:w-[170px] md:py-3 lg:w-[240px] lg:py-4 xl:w-[300px] 2xl:w-1/4 2xl:px-6 2xl:py-2">
+                <div class="flex justify-center gap-10 items-center sm:gap-2 lg:gap-7">
+                    <img src="high.png" alt="">
+                    <div>
+                        <p class="text-white">High Quality</p><span class="text-slate-400">Material is strong</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-1/4 border-solid border-2 border-white px-6 py-2 sm:w-[150px] md:w-[170px] md:py-3 lg:w-[240px] lg:py-4 xl:w-[300px] 2xl:w-1/4 2xl:px-6 2xl:py-2">
+                <div class="flex justify-center gap-10 items-center sm:gap-2 xl:gap-7">
+                    <img src="waranty.png" alt="">
+                    <div>
+                        <p class="text-white">Warranty Protection</p><span class="text-slate-400">Over 3 years</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-1/4 border-solid border-2 border-white px-6 py-2 sm:w-[150px] md:w-[170px] md:py-3 lg:w-[240px] lg:py-4 xl:w-[300px] 2xl:w-1/4 2xl:px-6 2xl:py-2">
+                <div class="flex justify-center gap-10 items-center sm:gap-2 lg:gap-7">
+                    <img src="free.png" alt="">
+                    <div>
+                        <p class="text-white">Free Shipping</p><span class="text-slate-400">Order 100 $</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-1/4 border-solid border-2 border-white px-6 py-2 sm:w-[150px] md:w-[170px] md:py-3 lg:w-[240px] lg:py-4 xl:w-[300px] 2xl:w-1/4 2xl:px-6 2xl:py-2">
+                <div class="flex justify-center gap-10 items-center sm:gap-2 lg:gap-4 xl:gap-7">
+                    <img src="24.png" alt="">
+                    <div>
+                        <p class="text-white">24 / Support</p><span class="text-slate-400">Dedicated Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sub Nav End -->
+
+    <!-- Content Start -->
+    <div class="container mx-auto">
+        <!-- Ruang Tamu - Ruang Kerja -->
+        <div class="py-24 sm:py-16 lg:py-20 xl:py-24">
+            <label class="text-yellow-400 text-xl sm:text-sm lg:text-lg xl:text-xl">Room</label>
+            <div class="flex justify-between items-center pb-10 sm:pb-5 lg:pb-7 xl:pb-10">
+                <h1 class="font-bold text-5xl sm:text-2xl lg:text-4xl xl:text-5xl">Categories</h1>
+                <button class="py-3 px-10 border-solid border-2 border-slate-500 hover:bg-slate-500 sm:py-1 sm:px-5 lg:py-2 lg:px-7 xl:py-3 xl:px-10">See more</button>
+            </div>
+            <div class="flex justify-between items-center gap-10 w-auto h-auto sm:gap-3 lg:gap-5 xl:gap-6">
+                <div class="relative flex justify-between items-center bg-[#BEDDE2;] w-1/2 h-80 sm:h-[200px] lg:h-[250px] xl:w-1/2 xl:h-80">
+                    <div>
+                        <img src="categori1.png" alt="" class="absolute bottom-0 left-0 float-left mr-5 sm:w-[100px] sm:h-[130px] md:w-[120px] md:h-[150px] lg:w-[190px] lg:h-[170px] xl:w-[230px] xl:h-[200px]">
+                    </div>
+                    <div class="w-1/2 sm:w-3/5 sm:py-2">
+                        <h1 class="font-bold text-4xl mb-5 sm:text-xl lg:text-3xl xl:text-4xl">Ruang Tamu</h1>
+                        <p class="pr-10 text-left my-5 py-3 sm:py-0 sm:text-sm sm:pr-2 lg:text-lg xl:pr-10 xl:my-5 xl:py-3">Terdapat berbagai macam furniture Ruang Tamu yang dapat anda beli dengan kualitas yang bagus.</p>
+                        <button class="regis bg-black text-white py-3 px-9 hover:bg-cyan-500 sm:text-sm sm:py-1 sm:px-5">Buy Now</button>
+                    </div>
+                </div>
+                <div class="relative flex justify-between items-center bg-[#DEEFE9;] w-1/2 h-80 sm:h-[200px] lg:h-[250px] xl:w-1/2 xl:h-80">
+                    <div>
+                        <img src="categori2.png" alt="" class="absolute bottom-0 left-10 float-left mr-5 sm:w-[100px] sm:left-2 sm:h-[130px] md:w-[120px] md:h-[150px] lg:w-[170px] lg:h-[200px] xl:w-[200px] xl:h-[270px]">
+                    </div>
+                    <div class="w-1/2 sm:w-3/5 sm:py-2">
+                        <h1 class="font-bold text-4xl mb-5 sm:text-xl lg:text-3xl">Ruang Kerja</h1>
+                        <p class="pr-10 text-left my-5 py-3 sm:py-0 sm:text-sm sm:pr-2 lg:text-lg xl:pr-10 xl:my-5 xl:py-3">Terdapat berbagai macam furniture Ruang Kerja, Seperti Kursi Kantor, Santay, dan lainnya</p>
+                        <button class="regis bg-black text-white py-3 px-9 hover:bg-cyan-500 sm:text-sm sm:py-1 sm:px-5">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ruang Tamu - Ruang Kerja -->
+
+        <!-- Our Best Seller Product - Start -->
+        <div>
+            <!-- Our Best Seller Product - 1 -->
+            <label class="text-yellow-400 text-xl sm:text-sm md:text-md lg:text-lg xl:text-xl">Room</label>
+            <div class="flex justify-between items-center py-7">
+                <h1 class="font-bold text-5xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Our Best Seller Product</h1>
+                <button class="py-3 px-10 border-solid border-2 border-slate-500 hover:bg-slate-500 sm:py-1 sm:px-5 lg:py-2 lg:px-7 xl:py-3 xl:px-10">See more</button>
+            </div>
+            <div class="flex justify-between gap-10 py-10 sm:gap-3 sm:py-5 lg:gap-5">
+                <div class="w-1/4">
+                    <img src="best1.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Meja Kerja Kantoran</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="relative flex justify-between pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                            <img src="bintang.png" alt="" class="absolute bottom-1 right-10">
+                            <label>(2.1)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <img src="best2.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Best Soffa</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="relative flex justify-between pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                            <img src="bintang.png" alt="" class="absolute bottom-1 right-10">
+                            <label>(2.1)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <img src="best3.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Meja Kerja</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <img src="best4.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Meja Laptop Besar</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Best Seller Product - 2 -->
+            <div class="flex justify-between gap-10 pb-10 sm:gap-3 lg:gap-5">
+                <div class="w-1/4">
+                    <img src="best5.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Best Chair</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <img src="best6.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Chair Office</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <img src="best7.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Kursi Kantoran (Murah)</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="relative flex justify-between pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                            <img src="bintang.png" alt="" class="absolute bottom-1 right-10">
+                            <label>(2.1)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-1/4">
+                    <img src="best8.png" alt="" class="w-full">
+                    <div class="py-6 sm:py-2 xl:pt-6">
+                        <div class="flex justify-between font-semibold text-xl sm:text-[13px] lg:text-lg xl:text-xl">
+                            <p>Meja Meeting</p>
+                            <label for="">$1.120</label>
+                        </div>
+                        <div class="pt-3 text-slate-400 text-[18px] sm:text-[11px] lg:text-[15px] xl:text-[18px]">
+                            <p>Best Quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Our Best Seller Product - End -->
+
+        <!-- Simple Woodem Table - Start -->
+        <div class="flex justify-between items-center py-10  gap-10 sm:gap-3 xl:gap-7">
+            <div class="w-[55%]">
+                <img src="simple.png" alt="" class="w-full h-full">
+                <div class="flex justify-center items-center gap-2 py-2">
+                    <button class="text-sm"><input type="radio" name="radio1"></button>
+                    <button class="text-sm"><input type="radio" name="radio1"></button>
+                    <button class="text-sm"><input type="radio" name="radio1"></button>
+                </div>
+            </div>
+            <div class="w-1/2">
+                <h1 class="font-bold text-6xl pb-10 sm:text-xl sm:pb-4 md:text-2xl lg:text-4xl xl:text-5xl xl:pb-10">Simpe Woodem Tabel</h1>
+                <p class="text-slate-500 text-justify sm:text-[11px] md:text-[13px] lg:text-[18px] xl:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, enim. Quia quidem, laboriosam quibusdam recusandae nisi dolorum reprehenderit quis, neque perferendis explicabo vel maiores sunt beatae incidunt cupiditate enim eos?</p>
+                <div class="flex justify-between items-center py-10 sm:py-4 xl:py-10">
+                    <button class="regis bg-black text-white py-2 px-7 hover:bg-cyan-500 sm:py-1 sm:px-3 sm:text-sm md:text-md md:py-2 md:px-4 lg:text-lg lg:py-2 lg:px-5 xl:text-xl xl:py-2 xl:px-7">Buy Now</button>
+                    <label for="" class="font-bold text-2xl sm:text-sm md:text-md lg:text-lg xl:text-xl">$1,300</label>
+                </div>
+            </div>
+        </div>
+        <!-- Simple Woodem Table - End -->
+
+        <!-- Find Furniture Now - Start -->
+        <div class="relative flex justify-center items-center bg-[#DEEFE9;] py-16 my-20 sm:py-6 lg:py-10">
+            <img src="lampu.png" alt="" class="absolute top-0 left-10 sm:w-[135px] sm:left-2 lg:w-[200px] xl:w-auto xl:left-10">
+            <div class="text-center items-center w-3/5 pb-20 z-10 sm:pb-4 lg:pb-10 xl:pb-20">
+                <h1 class="font-bold text-6xl pt-10 sm:text-2xl sm:pt-6 lg:text-4xl lg:pt-8 xl:text-5xl xl:pt-10">Find Furniture Now</h1>
+                <p class="py-10 text-slate-400 sm:text-sm sm:py-4 lg:text-md lg:py-8 xl:text-lg xl:py-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti velit unde quia temporibus assumenda quidem maxime mollitia dolores quibusdam!</p>
+                <button class="regis bg-black text-white py-3 px-8 hover:bg-cyan-500 sm:py-1 sm:px-4 sm:text-sm lg:text-lg lg:py-2 lg:px-6 xl:py-3
+                xl:px-8">Order Now</button>
+            </div>
+            <img src="find1.png" alt="" class="absolute bottom-0 right-5 sm:w-[135px] lg:w-[200px] xl:w-auto">
+            <img src="garisKeBawahFind.png" alt="" class="absolute w-full h-[97%] bottom-3 z-0 sm:h-[90%] sm:top-2 sm:bottom-2 lg:h-[95%] xl:h-[96%]">
+        </div>
+        <!-- Find Furniture Now - End -->
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start-->
+    <div class="bg-[#212121;]">
+        <div class="container flex justify-between mx-auto text-white py-20 sm:py-10 lg:py-14 xl:py-20">
+            <div class="w-[450px] sm:w-[230px] sm:text-justify lg:w-[350px] xl:w-[450px]">
+                <div class="flex items-center pb-10">
+                    <img src="Logo.png" alt="" class="w-10 mr-2"><span class="hover:text-slate-400">mangcoding Store</span>
+                </div>
+                <p class="pb-10 sm:text-sm lg:text-lg xl:text-xl xl:text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum sapiente voluptate quos recusandae nulla. Quod esse qui rerum saepe? Odit cum ut recusandae dolores! Assumenda commodi pariatur obcaecati quod ea.</p>
+                <div class="flex gap-3">
+                    <img src="facebook.png" alt="">
+                    <img src="twetter.png" alt="">
+                    <img src="linkedin.png" alt="">
+                    <img src="instagram.png" alt="">
+                </div>
+            </div>
+
+            <div class="w-[55%] sm:w-[60%] xl:w-[55%]">
+                <div class="flex justify-between pb-7">
+                    <div>
+                        <div class="pb-10">
+                            <h1 class="font-bold text-xl pb-5 sm:text-[13px] sm:pb-2 lg:text-lg lg:pb-5 xl:text-xl">Navigation</h1>
+                            <div>
+                                <ul>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Categories</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Best Product</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Cart</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Wishlist</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Contact</a></li>
+                                </ul>
+                            </div>    
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-xl pb-5 sm:text-[13px] sm:pb-2 lg:text-lg lg:pb-5 xl:text-xl">Payment method</h1>
+                            <div>
+                                <ul>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Credit card</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Paypal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pb-10">
+                            <h1 class="font-bold text-xl pb-5 sm:text-[13px] sm:pb-2 lg:text-lg lg:pb-5 xl:text-xl">Shop</h1>
+                            <div>
+                                <ul>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Ruang Tamu</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Ruang Makan</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Ruang Kerja</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] xl:text-[16px]"><a href="">Ruang Tidur</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Furniture</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-xl pb-5 sm:text-[13px] sm:pb-2 lg:text-lg lg:pb-5 xl:text-xl">Setting</h1>
+                            <div>
+                                <ul>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">My Acount</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Order</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Address</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px]"><a href="">Password</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pb-[105px] sm:pb-[92px] xl:pb-[102px]">
+                            <h1 class="font-bold text-xl pb-5 sm:text-[13px] sm:pb-2 lg:text-lg lg:pb-5 xl:text-xl">Product</h1>
+                            <div>
+                                <ul>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Chair</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Table</a></li>
+                                    <li class="hover:text-slate-400 pb-2 sm:text-[12px] lg:text-[14px] xl:text-[16px]"><a href="">Wardrobe</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="font-bold text-xl pb-5 sm:text-[13px] sm:pb-2 lg:text-lg lg:pb-5 xl:text-xl">Contact</h1>
+                            <div>
+                                <div class="flex items-center pb-2">
+                                    <img src="lokasi.png" alt="" class="w-5 mr-2 sm:w-3 lg:w-4 xl:w-5"><span class="hover:text-slate-400 sm:text-[12px] lg:text-[14px] xl:text-[16px]">Lokasimu di Jakarta Barat</span>
+                                </div>
+                                <div class="flex items-center pb-2">
+                                    <img src="email.png" alt="" class="w-5 mr-2 sm:w-3 lg:w-4 xl:w-5"><span class="hover:text-slate-400 sm:text-[12px] lg:text-[14px] xl:text-[16px]">furniture@gmail.com</span>
+                                </div>
+                                <div class="flex items-center pb-2">
+                                    <img src="telepon.png" alt="" class="w-5 mr-2 sm:w-3 lg:w-4 xl:w-5"><span class="hover:text-slate-400 sm:text-[12px] lg:text-[14px] xl:text-[16px]">0897 8608 8976</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End-->
+
+    <script src="app.js"></script>
+</body>
+</html>
